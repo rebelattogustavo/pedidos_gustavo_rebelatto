@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "firebase": "^9.9.4",
+    "firestore": "^1.1.6",
+    "init": "^0.1.2",
+    "nodemon": "^2.0.19"
+  },
+  "name": "pedidos_gustavo_rebelatto",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "git pull && cls && nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebelattogustavo/pedidos_gustavo_rebelatto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rebelattogustavo/pedidos_gustavo_rebelatto/issues"
+  },
+  "homepage": "https://github.com/rebelattogustavo/pedidos_gustavo_rebelatto#readme"
+}
