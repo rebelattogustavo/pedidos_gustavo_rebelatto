@@ -10,9 +10,10 @@ async function searchOrdersId(Id) {
 
 async function create(Status, Number, UserId, Id) {
     if (Id) {
-        let orderProducts = await crud.get('orders-products');
+        let orderProducts = await crud.get('order-products');
         console.log(orderProducts);
         let verifica;
+        console.log(orderProducts.length);
         if (orderProducts.length > 0) {
             for (let orderProduct of orderProducts){
                 if(orderProduct.OrderId == Id){
@@ -25,7 +26,7 @@ async function create(Status, Number, UserId, Id) {
         }else {
             return {"Error": "Order cannot be closed because there are no items in it"}
         }
-        if(verifica == 1) {
+        if(verifica == 1 && make != 1) {
             return {"Error": "Order cannot be closed because there are no items in it"}
         }
     } else {
