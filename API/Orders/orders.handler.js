@@ -20,7 +20,7 @@ async function create(Status, Number, UserId, Id) {
                     await crud.save('orders', Id, { Status, Number, UserId });
                     verifica =0;
                 }else{
-                    verifica =1
+                    verifica =1;
                 }
             }
         }else {

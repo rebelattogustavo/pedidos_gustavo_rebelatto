@@ -18,15 +18,15 @@ async function create(Quantity, ProductId, OrderId, Id) {
             let order = await crud.getById('orders', OrderId);
             if(order.Status == "Open"){
                 if (Quantity <= 0) {
-                    await remove(Id)
+                    await remove(Id);
                 } else {
                     await crud.save('order-products', Id, { Quantity, ProductId, OrderId });
                 }
             }else{
-                return {"Error": "Order is already closed"}
+                return {"Error": "Order is already closed"};
             }
         } else {
-            return { "Error": "Order Product not found" }
+            return { "Error": "Order Product not found" };
         }
     } else {
         let product = await crud.getById('products', ProductId);
@@ -53,7 +53,7 @@ async function create(Quantity, ProductId, OrderId, Id) {
                         await crud.save('order-products', null, { Quantity, ProductId, OrderId });
                     }
                 }else{
-                    return {"Error": "Order is already closed"}
+                    return {"Error": "Order is already closed"};
                 }
             } else {
                 return { "Error": "Order not found" };
